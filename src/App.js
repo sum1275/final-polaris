@@ -65,7 +65,7 @@ export default function ColorPickerWithTransparentValueExample() {
   const [value, setValue] = useState('your quote');
 const handleChange = useCallback((newValue) => setValue(newValue), []);
   const [color, setColor] = useState({
-    hue: 300,
+    hue: 100,
     brightness: 1,
     saturation: 0.7,
     alpha: 0.7

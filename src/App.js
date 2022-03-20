@@ -1,4 +1,4 @@
-import React, {useState,useCallback} from 'react';
+import React, {useState,useCallback,useEffect} from 'react';
 import {ColorPicker,TextField} from '@shopify/polaris';
 import html2canvas from 'html2canvas';
 
@@ -63,6 +63,7 @@ export default function ColorPickerWithTransparentValueExample() {
     }
   };
   const [value, setValue] = useState('your quote');
+  
 const handleChange = useCallback((newValue) => setValue(newValue), []);
   const [color, setColor] = useState({
     hue: 50,
@@ -70,6 +71,9 @@ const handleChange = useCallback((newValue) => setValue(newValue), []);
     saturation: 0.5,
     alpha: 0.5
   });
+  useEffect(() => {
+    setColor(color);
+}, [color]);
 console.log(color);
   return <div> 
     <TextField

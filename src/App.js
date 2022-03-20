@@ -67,7 +67,7 @@ const handleChange = useCallback((newValue) => setValue(newValue), []);
   const [color, setColor] = useState({
     hue: 0,
     brightness: 1,
-    saturation: 0.5,
+    saturation: 0,
     alpha: 1
   });
 console.log(color);
